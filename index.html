@@ -1,0 +1,379 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Chimpuuu!!!</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<div id="sparkle"></div>
+<div id="particles"></div>
+<div id="hearts"></div>
+
+<!-- Intro Screen -->
+
+<div id="introScreen">
+
+    <h1 class="introTitle">For Chimpu 🐒</h1>
+
+    <p class="introText">
+        I made something small for your birthday.
+    </p>
+
+    <button class="startBtn" onclick="startStory(), enterFullscreen()">
+        See this 👀
+    </button>
+
+</div>
+
+
+<!-- Page 1 -->
+
+<div class="page active" id="page1">
+
+    <h1>Reyy kothiii 🐒</h1>
+
+    <p>
+        Edho nak unna chinna talent tho nikosam try chesa 😜
+    <br><br>
+        Chinna surprise anuko.
+    </p>
+
+    <button onclick="nextPage(2)">Open</button>    
+
+</div>
+
+
+<!-- Page 2 -->
+
+<div class="page" id="page2">
+
+    <h1 id="birthdayText"></h1>
+
+    <p id="birthdaySub" style="font-size:22px; margin-top:20px;color:#333;"></p>
+
+    <button class="apologyBtn" id="birthdayNextBtn" onclick="nextPage(3)">Continue →</button>
+     
+
+</div>
+
+
+<!-- Page 3 -->
+
+<div class="page" id="page3">
+
+    <div class="bg18">18</div>
+
+    <h1 class="happyText">Happy 18</h1>
+
+    <p class="ageSub">
+        A new chapter of your life begins today.
+        <br>
+        <br>
+        Nik nachinattu undu, life enjoyy chey alage anukunnadhi saadhinchi chupiyyi chaalu 😎
+Sare naaaaa.......
+    </p>
+
+    <button onclick="nextPage(4)">Continue →</button>
+     
+
+</div>
+
+
+<!-- Page 4 -->
+
+<div class="page" id="page4">
+
+    <h1>About You</h1>
+
+    <p id="typing"></p>
+
+    <button onclick="nextPage(5)">Continue →</button>
+     
+
+</div>
+
+<div class="page" id="page5">
+
+    <h2 class="memorytitle">POP a few memories...</h2>
+
+<p class="memoryHint">
+    Pop the balloons and tap the image popped to see the magic ✨
+</p>
+
+    <div class="balloonContainer">
+
+        <div class="balloon" onclick="openMemory(this)">
+            <img src="images/balloons/bl1.png" class="balloonImg">
+            <img src="images/memories/photo1.jpg" class="memoryPhoto" onclick="openMemory(this)">
+            <div class="photoCaption">Still one of my favourites (●'◡'●)</div>
+        </div>
+
+        <div class="balloon" onclick="openMemory(this)">
+            <img src="images/balloons/bl2.png" class="balloonImg">
+            <img src="images/memories/photo2.jpg" class="memoryPhoto" onclick="openMemory(this)">
+            <div class="photoCaption">Fest day + this look >> 😌</div>
+        </div>
+
+        <div class="balloon" onclick="openMemory(this)">
+            <img src="images/balloons/bl3.png" class="balloonImg">
+            <img src="images/memories/photo3.jpg" class="memoryPhoto" onclick="openMemory(this)">
+            <div class="photoCaption">That random day 😜</div>
+        </div>
+
+        <div class="balloon" onclick="openMemory(this)">
+            <img src="images/balloons/bl4.png" class="balloonImg">
+            <img src="images/memories/photo4.jpg" class="memoryPhoto" onclick="openMemory(this)">
+            <div class="photoCaption">Holi aa Dayyamm aa 👻😂</div>
+        </div>
+
+        <div class="balloon" onclick="openMemory(this)">
+            <img src="images/balloons/bl5.png" class="balloonImg">
+            <img src="images/memories/photo5.jpg" class="memoryPhoto" onclick="openMemory(this)">
+            <div class="photoCaption">Already cheppina kadha…
+nak nuv inka aa chinna Spoorthy lane anipisthav 😂</div>
+        </div>
+
+    </div>
+
+    <button id="memoryNextBtn" style="opacity:0; pointer-events: none;" onclick="nextPage(6)">Continue →</button>
+     
+
+</div>
+
+<!-- Page 5 -->
+
+<div class="page" id="page6">
+
+<div class="moodWrapper">
+    <h1 id="memoryText"></h1>
+</div>
+
+<button id="memoryTextNextBtn" onclick="nextPage(7)">Continue →</button>
+ 
+
+</div>
+
+
+<div class="page apologyPage" id="page7">
+
+<p class="apologyText">
+Reyy kothiii...
+mundhu oka chinna sorry cheppali… actually cheppalante konchem pedhadhe…
+</p>
+
+<button class="apologyBtn" onclick="nextPage(8)">Continue →</button>
+ 
+
+</div>
+
+<div class="page apologyPage" id="page8">
+
+<p class="apologyText">
+Aaroju na valla nuvvu uncomfortable feel ayyav ani nak appude artham ayyindhi
+Kani aa time lo avanni cheppadam correct kaadhu ani koncham late ga telsindhi
+Ninnu hurt cheyyadam eppatiki naa intention kadu raa… nijanga sorryyy raaa😭
+</p>
+
+<button class="apologyBtn" onclick="nextPage(9)">Continue →</button>
+ 
+
+</div>
+
+<div class="page apologyPage" id="page9">
+
+<p class="apologyText">
+Naku evvarini blame cheyyalani ledu…
+kanii niku ala anipinchela chesinanduku tappu naadhe anipisthundhi
+</p>
+
+<button class="apologyBtn" onclick="nextPage(10)">Continue →</button>
+ 
+
+</div>
+
+<div class="page apologyPage" id="page10">
+
+<p class="apologyText">
+Nenu eppudu mana friendship ni chaala genuine ga ne treat chesaa
+Ninnu na special bestfriend la chusukunna, and aa bond ni eppatikii alane continue cheyyalani anukuntunnaa
+
+Mundhu ela unnanoo, eppatiki alane untaa…
+
+Niku ela comfortable ga unte, alane untaa…
+</p>
+
+<button class="apologyBtn" onclick="nextPage(11)">Continue →</button>
+ 
+
+</div>
+
+<div class="page apologyPage" id="page11">
+
+<p class="apologyText">
+Aaroju mana madhya aa matter jariginappudu kuda nenu niku anni honest ga cheppesa… em dhachaledu
+Kani ippudu aa topic ni malli tiyyalani assalu ledu
+</p>
+
+<button class="apologyBtn" onclick="nextPage(12)">Continue →</button>
+ 
+
+</div>
+
+<div class="page apologyPage" id="page12">
+
+    <p class="apologyText">
+    Nijam cheppali ante aaroju nundi mana madhya konchem different ga unde…
+    and mana madhya mundhu unna comfort, freedom and ah happiness naku konchem miss avthunnayi
+    </p>
+
+    <button class="apologyBtn" onclick="nextPage(13)">Continue →</button>
+     
+
+</div>
+
+<div class="page apologyPage" id="page13">
+
+<p class="apologyText">
+December holidays lo manam ela aithe happy ga, edhi anipisthe adhi matladukunnamo… malli ala undagaligite baguntadhi ani anukuntunnaa🥺
+</p>
+
+<button class="apologyBtn" onclick="nextPage(14)">Continue →</button>
+ 
+
+</div>
+
+<div class="page apologyPage" id="page14">
+
+<p class="apologyText">
+Nijam cheppali ante, naku eppudu eh vishayam jarigina sare first niku cheppalani, nitho share chesukovali ani anipisthadhi raa…
+Endhukante alavatu aipoyindhi iga naku nitho ala undadam
+Nitho matladithe chaalu na mood fix aipothadhi ela unna sare…
+</p>
+
+<button class="apologyBtn" onclick="nextPage(15)">Continue →</button>
+ 
+
+</div>
+
+<div class="page apologyPage" id="page15">
+
+<p class="apologyText">
+Kani ippudu konchem different ga anipinchina kuda… slow ga malli manam mundhula untam ani anukuntunnaa…
+
+Time theeskoni aina sare malli naa kothii natho mundhula comfortable ga undagaligithe chaalu...
+</p>
+
+<button class="apologyBtn" onclick="nextPage(16)">Continue →</button>
+ 
+</div>
+
+<div class="page moodChange" id="page16">
+    <div class="moodWrapper">
+        <h1 id="moodText"></h1>
+    </div>
+
+    <button id="moodNextBtn" style="opacity:0; pointer-events: none;" onclick="nextPage(17)">Continue →</button>
+</div>
+
+<div class="page" id="page17">
+    <div class="moodWrapper">
+    <h1 id="giftText"></h1>
+    </div>
+  <button id="giftNextBtn" onclick="nextPage(18)">See this</button>
+   
+
+</div>
+
+<div class="page" id="page18">
+
+    <div class="moodWrapper">
+        <h1 id="giftHintText"></h1>
+    </div>
+
+    <button id="giftHintNextBtn" onclick="nextPage(19)">Continue →</button>
+     
+
+</div>
+
+<div class="page" id="page19">
+
+    <div class="moodWrapper">
+        <h1 id="gift2Text"></h1>
+    </div>
+
+    <button id="gift2NextBtn" onclick="nextPage(20)">Open it</button>
+     
+
+</div>
+
+<div class="page" id="page20">
+
+    <div class="moodWrapper">
+        <h1 id="listenText"></h1>
+    </div>
+
+    <button id="listenNextBtn" onclick="nextPage(21)">Continue →</button>
+     
+
+</div>
+
+<div class="page" id="page21">
+
+    <div class="finalContainer">
+
+        <button id="revealBtn" onclick="revealPhoto()">
+            Tap to Reveal
+        </button>
+
+        <img src="images/final/final.jpg" id="finalPhoto">
+
+        <button id="photoNextBtn" onclick="nextPage(22)">Continue →</button>
+
+    </div>
+     
+
+</div>
+
+<div class="page" id="page22">
+
+    <div class="moodWrapper">
+        <p id="hiddenMessage"></p>
+        </div>
+
+            <button id="hiddenNextBtn" onclick="nextPage(23)">Continue →</button>
+
+        </div>
+    </div>
+     
+</div>
+
+<div class="page" id="page23">
+
+<div class="finalContainer">
+
+    <h1 id="endText">
+        That’s all… just wanted to make you smile.😁
+    </h1>
+
+    <h2 id="endText2"></h2>
+
+</div>
+ 
+
+</div>
+
+<button id="globalBackBtn" onclick="prevPage()">←</button>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
