@@ -697,7 +697,7 @@ if(!img.classList.contains("scattered")){
 
 img.style.transform =
 `translate(-50%, -50%) scale(${scatterScale}) rotate(${pos.rotate}deg)`;
-
+}
 
 }
 
